@@ -3,7 +3,7 @@ package utils;
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.ValidatableResponse;
-import model.OrderToSend;
+import model.OrderInfoToSend;
 import model.RefreshToken;
 import model.UserToSend;
 
@@ -21,7 +21,7 @@ public class StellarBurgerClient {
     }
 
     @Step("Клиент -- создание заказа")
-    public ValidatableResponse createOrder(OrderToSend order, String authToken){
+    public ValidatableResponse createOrder(OrderInfoToSend order, String authToken){
         return given()
                 .filter(new AllureRestAssured())
                 .header("Authorization", authToken)
@@ -58,6 +58,7 @@ public class StellarBurgerClient {
                 .then();
     }
 
+    // Не пригодится в рамках проекта, поэтому скорее всего не будет реализован
     //public ValidatableResponse refreshUserToken(){}
 
     @Step("Клиент -- получение информации о пользователе")
