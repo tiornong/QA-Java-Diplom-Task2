@@ -1,7 +1,6 @@
 package UpdateUserInfoEndpointTest;
 
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 
 //TODO: параметризация на все поля
 public class UpdateUserInfoTest {

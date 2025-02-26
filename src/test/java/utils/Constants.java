@@ -8,4 +8,8 @@ public class Constants {
     public static final String USER_INFO_URL = "https://stellarburgers.nomoreparties.site/api/auth/user";
     public static final String ALL_ORDERS_URL = "https://stellarburgers.nomoreparties.site/api/orders/all";
     public static final String LOGOUT_URL = "https://stellarburgers.nomoreparties.site/api/auth/logout";
+
+    public static final String TEST_USER_EMAIL = "test-email@test.test";
+    public static final String TEST_USER_PASSWORD = "testpassword";
+    public static final String TEST_USER_NAME = "testname";
 }
