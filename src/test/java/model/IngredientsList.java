@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class IngredientsList {
-    private String success;
-    private Ingredient[] ingredient;
+    private String          success;
+    private Ingredient[]    ingredient;
 }

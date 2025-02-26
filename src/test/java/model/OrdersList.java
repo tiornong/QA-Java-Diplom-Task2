@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrdersList {
-    private String success;
+    private String  success;
     private Order[] orders;
-    private int total;
-    private int totalToday;
+    private int     total;
+    private int     totalToday;
 }

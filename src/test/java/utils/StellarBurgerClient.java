@@ -30,6 +30,7 @@ public class StellarBurgerClient {
                 .then();
     }
 
+    // Не пригодится в рамках проекта, поэтому скорее всего не будет реализован
     //public ValidatableResponse restorePassword(){}
 
     @Step("Клиент -- создание пользователя")
