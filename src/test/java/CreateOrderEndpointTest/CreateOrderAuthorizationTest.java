@@ -52,10 +52,10 @@ public class CreateOrderAuthorizationTest {
     public void createOrderWithoutAuthorization(){
         StellarBurgerClient client = new StellarBurgerClient();
 
-        String[] ingredients = {"60d3b41abdacab0026a733c6","609646e4dc916e00276b2870"};
+        String[] ingredients =  {"61c0c5a71d1f82001bdaaa6d","61c0c5a71d1f82001bdaaa6f"};
         OrderInfoToSend orderInfo = new OrderInfoToSend(ingredients);
 
-        ValidatableResponse response = client.createOrder(orderInfo, "");
+        ValidatableResponse response = client.createOrder(orderInfo, "test");
 
         response.assertThat()
                 .statusCode(SC_UNAUTHORIZED);
