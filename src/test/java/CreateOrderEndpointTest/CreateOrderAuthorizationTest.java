@@ -55,7 +55,7 @@ public class CreateOrderAuthorizationTest {
         String[] ingredients =  {"61c0c5a71d1f82001bdaaa6d","61c0c5a71d1f82001bdaaa6f"};
         OrderInfoToSend orderInfo = new OrderInfoToSend(ingredients);
 
-        ValidatableResponse response = client.createOrder(orderInfo, "test");
+        ValidatableResponse response = client.createOrder(orderInfo, "");
 
         response.assertThat()
                 .statusCode(SC_UNAUTHORIZED);

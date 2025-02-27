@@ -77,7 +77,7 @@ public class StellarBurgerClient {
     }
 
     @Step("Клиент -- обновление информации о пользователе")
-    public ValidatableResponse updateUserInfo(String authToken, UserToSend user){
+    public ValidatableResponse updateUserInfo(UserToSend user, String authToken){
         return given()
                 .filter(new AllureRestAssured())
                 .header("Authorization", authToken)
