@@ -44,7 +44,7 @@ public class CreateOrderAuthorizationTest {
         ValidatableResponse response = client.createOrder(orderInfo, authToken);
 
         response.assertThat()
-                .statusCode(SC_OK);
+                .statusCode(SC_CREATED);
     }
 
     @Test
