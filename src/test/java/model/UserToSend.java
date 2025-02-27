@@ -11,4 +11,8 @@ public class UserToSend {
     private String email;
     private String password;
     private String name;
+
+    public UserToSend copy() {
+        return new UserToSend(this.email, this.password, this.name);
+    }
 }

@@ -54,7 +54,7 @@ public class CreateUserWithLackInfoTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("Попытка создание пользователя без имени")
     public void createUserWithLackNameTest(){
         StellarBurgerClient client = new StellarBurgerClient();
         UserToSend userToSend = new UserToSend(TEST_USER_EMAIL, TEST_USER_PASSWORD, "");
