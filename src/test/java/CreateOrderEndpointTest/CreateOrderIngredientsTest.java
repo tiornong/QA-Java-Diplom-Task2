@@ -7,12 +7,14 @@ import model.OrderInfoToSend;
 import model.UserToSend;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
 
 import static org.apache.http.HttpStatus.*;
 import static utils.Constants.*;
 
+@DisplayName("Тесты создания заказа, связанные с ингредиентами")
 public class CreateOrderIngredientsTest {
 
     private String authToken;

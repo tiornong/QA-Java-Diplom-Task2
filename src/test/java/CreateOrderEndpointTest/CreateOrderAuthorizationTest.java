@@ -14,7 +14,7 @@ import utils.StellarBurgerClient;
 import static org.apache.http.HttpStatus.*;
 import static utils.Constants.*;
 
-@DisplayName("Проверки создания пользователя, связанные с авторизацией")
+@DisplayName("Проверки создания заказа, связанные с авторизацией")
 public class CreateOrderAuthorizationTest {
 
     private String authToken;
@@ -60,4 +60,5 @@ public class CreateOrderAuthorizationTest {
         response.assertThat()
                 .statusCode(SC_UNAUTHORIZED);
     }
+
 }
