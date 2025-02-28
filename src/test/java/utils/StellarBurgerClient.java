@@ -3,7 +3,7 @@ package utils;
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.ValidatableResponse;
-import model.OrderInfoToSend;
+import model.bodytosend.OrderInfoToSend;
 import model.RefreshToken;
 import model.UserToSend;
 

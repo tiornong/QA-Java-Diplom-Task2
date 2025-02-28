@@ -3,12 +3,11 @@ package CreateOrderEndpointTest;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 import model.AuthorizationInfo;
-import model.OrderInfoToSend;
+import model.bodytoget.OrderSuccessConfirmation;
+import model.bodytoget.StandardAnswer;
+import model.bodytosend.OrderInfoToSend;
 import model.UserToSend;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import utils.StellarBurgerClient;
 
 import static org.apache.http.HttpStatus.*;
@@ -45,6 +44,9 @@ public class CreateOrderAuthorizationTest {
 
         response.assertThat()
                 .statusCode(SC_CREATED);
+
+        OrderSuccessConfirmation orderConfirmation = response.extract().as(OrderSuccessConfirmation.class);
+        Assertions.assertNotNull(orderConfirmation);
     }
 
     @Test
@@ -59,6 +61,9 @@ public class CreateOrderAuthorizationTest {
 
         response.assertThat()
                 .statusCode(SC_UNAUTHORIZED);
+
+        StandardAnswer answer = response.extract().as(StandardAnswer.class);
+        Assertions.assertNotNull(answer);
     }
 
 }
