@@ -6,7 +6,7 @@ import model.bodytoget.AuthorizationInfo;
 import model.bodytoget.OrderSuccessConfirmation;
 import model.bodytoget.StandardAnswer;
 import model.bodytosend.OrderInfoToSend;
-import model.UserToSend;
+import model.bodytosend.UserToSend;
 import org.junit.jupiter.api.*;
 import utils.StellarBurgerClient;
 

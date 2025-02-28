@@ -5,7 +5,7 @@ import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.ValidatableResponse;
 import model.bodytosend.OrderInfoToSend;
 import model.RefreshToken;
-import model.UserToSend;
+import model.bodytosend.UserToSend;
 
 import static io.restassured.RestAssured.given;
 import static utils.Constants.*;

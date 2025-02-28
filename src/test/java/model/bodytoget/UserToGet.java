@@ -1,4 +1,4 @@
-package model;
+package model.bodytoget;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,12 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserToSend {
+public class UserToGet {
     private String email;
-    private String password;
     private String name;
-
-    public UserToSend copy() {
-        return new UserToSend(this.email, this.password, this.name);
-    }
 }

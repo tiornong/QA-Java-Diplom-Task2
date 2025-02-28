@@ -2,7 +2,10 @@ package GetOrdersByUserEndpointTest;
 
 import io.restassured.response.ValidatableResponse;
 import model.bodytoget.AuthorizationInfo;
-import model.UserToSend;
+import model.bodytoget.OrdersList;
+import model.bodytoget.StandardAnswer;
+import model.bodytosend.UserToSend;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
@@ -24,6 +27,8 @@ public class GetOrdersByUserTest {
 
         ValidatableResponse response = client.getOrdersByUser(authToken);
         response.assertThat().statusCode(SC_OK);
+        OrdersList ordersList = response.extract().as(OrdersList.class);
+        Assertions.assertNotNull(ordersList);
 
         client.deleteUser(authToken);
 
@@ -36,5 +41,7 @@ public class GetOrdersByUserTest {
         ValidatableResponse response = client.getOrdersByUser("");
 
         response.assertThat().statusCode(SC_UNAUTHORIZED);
+        StandardAnswer answer = response.extract().as(StandardAnswer.class);
+        Assertions.assertNotNull(answer);
     }
 }

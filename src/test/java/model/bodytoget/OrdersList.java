@@ -1,4 +1,4 @@
-package model;
+package model.bodytoget;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OrdersList {
     private String  success;
-    private Order[] orders;
+    private OrderInfo[] orders;
     private int     total;
     private int     totalToday;
 }

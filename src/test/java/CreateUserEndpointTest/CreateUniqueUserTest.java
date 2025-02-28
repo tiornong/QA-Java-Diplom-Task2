@@ -2,7 +2,7 @@ package CreateUserEndpointTest;
 
 import io.restassured.response.ValidatableResponse;
 import model.bodytoget.AuthorizationInfo;
-import model.UserToSend;
+import model.bodytosend.UserToSend;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

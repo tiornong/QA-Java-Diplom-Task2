@@ -1,4 +1,4 @@
-package model;
+package model.bodytoget;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class OrderInfo {
     private String[]    ingredients;
     private String      _id;
     private int         number;
