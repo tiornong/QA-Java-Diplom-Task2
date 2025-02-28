@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>internship.avito</groupId>
-    <artifactId>APITests</artifactId>
+    <groupId>ru.praktikum</groupId>
+    <artifactId>QA-Java-Diplom-Task2</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -41,8 +41,9 @@
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-junit4</artifactId>
-            <version>${allure.version}</version>
+            <artifactId>allure-junit5</artifactId>
+            <version>2.24.0</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -71,11 +72,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.datafaker</groupId>
-            <artifactId>datafaker</artifactId>
-            <version>1.6.0</version>
         </dependency>
     </dependencies>
 
