@@ -4,6 +4,7 @@ import io.restassured.response.ValidatableResponse;
 import model.AuthorizationInfo;
 import model.UserToSend;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
@@ -30,6 +31,7 @@ public class CreateUserWithLackInfoTest {
 
         try {
             authToken = response.extract().as(AuthorizationInfo.class).getAccessToken();
+            Assertions.fail();
         } catch (Exception e) {
             authToken = "";
         }
@@ -46,6 +48,7 @@ public class CreateUserWithLackInfoTest {
 
         try {
             authToken = response.extract().as(AuthorizationInfo.class).getAccessToken();
+            Assertions.fail();
         } catch (Exception e) {
             authToken = "";
         }
