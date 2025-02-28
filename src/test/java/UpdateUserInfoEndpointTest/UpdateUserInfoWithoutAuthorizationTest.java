@@ -2,7 +2,7 @@ package UpdateUserInfoEndpointTest;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserInfoToGet;
 import model.UserToSend;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +11,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
 
-import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 import static utils.Constants.*;
 import static utils.Constants.TEST_USER_PASSWORD;

@@ -1,9 +1,11 @@
 package CreateUserEndpointTest;
 
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserToSend;
+import model.bodytoget.StandardAnswer;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
@@ -33,5 +35,7 @@ public class CreateDuplicateUserTest {
         ValidatableResponse response = client.createUser(userToSend);
 
         response.assertThat().statusCode(SC_FORBIDDEN);
+        StandardAnswer answer = response.extract().as(StandardAnswer.class);
+        Assertions.assertNotNull(answer);
     }
 }

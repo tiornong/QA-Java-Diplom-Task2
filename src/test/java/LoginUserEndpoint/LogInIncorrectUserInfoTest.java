@@ -2,7 +2,7 @@ package LoginUserEndpoint;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserToSend;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

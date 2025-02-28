@@ -1,7 +1,7 @@
 package GetOrdersByUserEndpointTest;
 
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserToSend;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

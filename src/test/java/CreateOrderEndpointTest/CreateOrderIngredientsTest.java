@@ -2,7 +2,7 @@ package CreateOrderEndpointTest;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.bodytoget.OrderSuccessConfirmation;
 import model.bodytoget.StandardAnswer;
 import model.bodytosend.OrderInfoToSend;

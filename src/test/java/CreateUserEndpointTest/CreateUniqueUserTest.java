@@ -1,9 +1,10 @@
 package CreateUserEndpointTest;
 
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserToSend;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import utils.StellarBurgerClient;
@@ -32,5 +33,7 @@ public class CreateUniqueUserTest {
         authToken = response.extract().as(AuthorizationInfo.class).getAccessToken();
 
         response.assertThat().statusCode(SC_CREATED);
+        AuthorizationInfo authorizationInfo = response.extract().as(AuthorizationInfo.class);
+        Assertions.assertNotNull(authorizationInfo);
     }
 }

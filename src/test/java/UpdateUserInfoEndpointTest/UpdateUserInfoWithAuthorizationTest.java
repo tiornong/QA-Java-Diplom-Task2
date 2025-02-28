@@ -2,7 +2,7 @@ package UpdateUserInfoEndpointTest;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import model.AuthorizationInfo;
+import model.bodytoget.AuthorizationInfo;
 import model.UserInfoToGet;
 
 import model.UserToSend;
